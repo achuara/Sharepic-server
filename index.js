@@ -17,8 +17,8 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 
-app.use('/posts', postRoutes);
-app.use('/user', userRoutes);
+//app.use('/posts', postRoutes);
+//app.use('/user', userRoutes);
 
 app.use("/", (req, res)=>{
   res.json({ message: "hello from Server"});
