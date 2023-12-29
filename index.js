@@ -17,13 +17,10 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 
-//app.use('/posts', postRoutes);
-//app.use('/user', userRoutes);
+app.use('/posts', postRoutes);
+app.use('/user', userRoutes);
 
-app.use("/", (req, res)=>{
-  res.json({ message: "hello from Server"});
-}
-);
+
 
 
 const CONNECTION_URL = "mongodb+srv://sumankumar21041999:social123@cluster1.vigicqk.mongodb.net/?retryWrites=true&w=majority";
